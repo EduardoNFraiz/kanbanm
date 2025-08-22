@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.eduardo.task.R
 import com.eduardo.task.databinding.FragmentLoginBinding
@@ -35,13 +36,23 @@ class LoginFragment : Fragment() {
 
     private fun initListener(){
         binding.buttonLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_global_homeFragment)
+            valideData()
         }
-        binding.textViewCriarConta.setOnClickListener {
+        binding.btnRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-        binding.textViewRecuperarConta.setOnClickListener {
+        binding.btnRecover.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_recoverAccountFragment)
+        }
+    }
+
+    private fun valideData(){
+        val email = binding.editTextEmail.text.toString().trim()
+        val senha = binding.editTextSenha.text.toString().trim()
+        if(email.isNotBlank()){
+            findNavController().navigate(R.id.action_global_homeFragment)
+        }else{
+            Toast.makeText(requireContext(), "Preencha a senha!*", Toast.LENGTH_SHORT)
         }
     }
 }

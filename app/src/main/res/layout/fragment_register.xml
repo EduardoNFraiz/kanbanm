@@ -19,6 +19,7 @@
         android:id="@+id/linearlayout1">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
@@ -28,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:text="Criar Conta"
                 android:textColor="@color/white"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"/>
 
         </com.google.android.material.appbar.MaterialToolbar>
 
