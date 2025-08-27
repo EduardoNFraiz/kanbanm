@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nova tarefa"
+                android:text="@string/title_nova_tarefa_formtask_fragment"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"/>
 
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:text="Descrição"
+                android:text="@string/description_text"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -48,8 +48,8 @@
                 android:layout_height="48dp"
                 android:id="@+id/editTextDescricao"
                 android:paddingStart="15dp"
-                android:background="@drawable/bg_edittext"
-                android:hint="Informe sua nova tarefa"
+                style="@style/EditTextTheme"
+                android:hint="@string/hint_edit_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView"/>
@@ -58,14 +58,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewStatus"
                 android:layout_marginTop="16dp"
-                android:text="Status"
+                android:text="@string/title_status_radiogroup_formtask"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextDescricao"/>
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:id="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,26 +73,29 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewStatus">
                 <RadioButton
                     android:layout_width="88dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/rbTodo"
-                    android:text="A Fazer"
+                    android:text="@string/a_fazer_radiobutton"
                     android:checked="true"
+                    android:layout_weight="1"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
                 <RadioButton
                     android:layout_width="88dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/rbDoing"
                     android:buttonTint="@color/black"
-                    android:text="Fazendo"
+                    android:layout_weight="1"
+                    android:text="@string/fazendo_radiobutton"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
                 <RadioButton
                     android:layout_width="88dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/rbDone"
+                    android:layout_weight="1"
                     android:buttonTint="@color/black"
-                    android:text="Feita"
+                    android:text="@string/feita_radiobutton"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -102,11 +105,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonSave"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_btn"
-                android:text="Salvar"
-                android:textAllCaps="false"
-                android:textColor="@color/color_default"
-                app:backgroundTint="@null"
+                android:text="@string/text_button_formtask_fragment"
+                style="@style/ButtonTheme"
                 app:layout_editor_absoluteX="16dp"
                 app:layout_editor_absoluteY="221dp"
                 app:layout_constraintEnd_toEndOf="parent"

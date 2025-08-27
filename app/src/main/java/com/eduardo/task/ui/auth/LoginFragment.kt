@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.eduardo.task.R
 import com.eduardo.task.databinding.FragmentLoginBinding
+import com.eduardo.task.util.showBottomSheet
 
 class LoginFragment : Fragment() {
 
@@ -24,11 +25,6 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListener()
@@ -38,10 +34,10 @@ class LoginFragment : Fragment() {
         binding.buttonLogin.setOnClickListener {
             valideData()
         }
-        binding.btnRegister.setOnClickListener {
+        binding.textViewCriarConta.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-        binding.btnRecover.setOnClickListener {
+        binding.textViewRecuperarConta.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_recoverAccountFragment)
         }
     }
@@ -49,10 +45,20 @@ class LoginFragment : Fragment() {
     private fun valideData(){
         val email = binding.editTextEmail.text.toString().trim()
         val senha = binding.editTextSenha.text.toString().trim()
-        if(email.isNotBlank()){
-            findNavController().navigate(R.id.action_global_homeFragment)
+        if(email.isNotBlank()) {
+            if (senha.isNotBlank()) {
+                findNavController().navigate(R.id.action_global_homeFragment)
+            } else {
+                showBottomSheet(message = getString(R.string.password_empty))
+            }
         }else{
-            Toast.makeText(requireContext(), "Preencha a senha!*", Toast.LENGTH_SHORT)
+            showBottomSheet(message = getString(R.string.email_empty))
         }
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
