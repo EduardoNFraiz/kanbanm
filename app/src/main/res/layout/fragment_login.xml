@@ -7,55 +7,56 @@
     tools:context=".ui.auth.LoginFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="25dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textviewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_text"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/editTextEmail"
+            style="@style/EditTextTheme"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginTop="4dp"
             android:hint="@string/hint_edit_email"
-            style="@style/EditTextTheme"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="4dp" />
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/textViewSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="@string/passord_text"
-            android:textColor="@color/white"
-            android:layout_marginTop="16dp"/>
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/editTextSenha"
+            style="@style/EditTextTheme"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:inputType="textPassword"
+            android:layout_marginTop="4dp"
             android:hint="@string/hint_edit_password"
-            style="@style/EditTextTheme"
-            android:layout_marginTop="4dp"/>
+            android:inputType="textPassword" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogin"
+            style="@style/ButtonTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/text_title_login_fragment"
-            style="@style/ButtonTheme"/>
+            android:text="@string/text_title_login_fragment" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,20 +68,21 @@
                 android:id="@+id/textViewCriarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/text_button_register_login_fragment"
                 android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:layout_weight="1"/>
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/textViewRecuperarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/text_button_recover_login_fragment"
                 android:textAlignment="textEnd"
-                android:textColor="@color/white"
-                android:layout_weight="1"/>
+                android:textColor="@color/white" />
         </LinearLayout>
+
         <ProgressBar
             android:id="@+id/progressbar"
             android:layout_width="wrap_content"
@@ -88,9 +90,20 @@
             android:layout_gravity="center"
             android:indeterminateTint="@color/white"
             android:visibility="invisible"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eduardo Neumam Fraizleben"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

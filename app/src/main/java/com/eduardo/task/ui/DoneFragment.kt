@@ -72,11 +72,11 @@ class DoneFragment : Fragment() {
 
     private fun getTask() {
         val taskList = listOf(
-            Task("0", "1Criar nova tela do app", Status.DONE),
-            Task("1","2Validar informações na tela de login", Status.DONE),
-            Task("2","3Adicionar nova funcionalidade no app", Status.DONE),
-            Task("3", "4Salvar token localmente", Status.DONE),
-            Task("4","5Criar funcionalidade de logout no app", Status.DONE),
+            Task("0", "Escolha do nome e identidade visual inicial do projeto", Status.DONE),
+            Task("1","Definição do escopo do projeto ReUse", Status.DONE),
+            Task("2","Criação do repositório no GitHub", Status.DONE),
+            Task("3", "Estrutura inicial do banco de dados (usuários, roupas, instituições)", Status.DONE),
+            Task("4","Configuração do ambiente de desenvolvimento (PHP, MySQL/PostgreSQL, HTML, CSS, JS)", Status.DONE),
         )
         taskAdapter.submitList(taskList)
     }

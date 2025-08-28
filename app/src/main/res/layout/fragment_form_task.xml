@@ -49,6 +49,7 @@
                 android:id="@+id/editTextDescricao"
                 android:paddingStart="15dp"
                 style="@style/EditTextTheme"
+                android:inputType="text"
                 android:hint="@string/hint_edit_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +128,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/buttonSave"/>
+
+            <TextView
+                android:id="@+id/textViewNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eduardo Neumam Fraizleben"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
