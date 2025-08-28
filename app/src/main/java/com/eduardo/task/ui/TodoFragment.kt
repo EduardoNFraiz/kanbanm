@@ -72,13 +72,16 @@ class TodoFragment : Fragment() {
         }
     }
 
-    private fun getTask() = listOf(
-        Task("0", "Criar nova tela do app",Status.TODO),
-        Task("1","Validar informações na tela de login",Status.TODO),
-        Task("2","Adicionar nova funcionalidade no app",Status.TODO),
-        Task("3", "Salvar token localmente",Status.TODO),
-        Task("4","Criar funcionalidade de logout no app",Status.TODO),
-    )
+    private fun getTask() {
+        val taskList = listOf(
+            Task("0", "Criar nova tela do app",Status.TODO),
+            Task("1","Validar informações na tela de login",Status.TODO),
+            Task("2","Adicionar nova funcionalidade no app",Status.TODO),
+            Task("3", "Salvar token localmente",Status.TODO),
+            Task("4","Criar funcionalidade de logout no app",Status.TODO),
+        )
+        taskAdapter.submitList(taskList)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

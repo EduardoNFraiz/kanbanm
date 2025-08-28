@@ -72,14 +72,16 @@ class DoingFragment : Fragment() {
             }
         }
     }
-
-    private fun getTask() = listOf(
-        Task("0", "6Criar nova tela do app", Status.DOING),
-        Task("1","7Validar informações na tela de login", Status.DOING),
-        Task("2","8Adicionar nova funcionalidade no app", Status.DOING),
-        Task("3", "9Salvar token localmente", Status.DOING),
-        Task("4","10Criar funcionalidade de logout no app", Status.DOING),
-    )
+    private fun getTask() {
+        val taskList = listOf(
+            Task("0", "6Criar nova tela do app", Status.DOING),
+            Task("1","7Validar informações na tela de login", Status.DOING),
+            Task("2","8Adicionar nova funcionalidade no app", Status.DOING),
+            Task("3", "9Salvar token localmente", Status.DOING),
+            Task("4","10Criar funcionalidade de logout no app", Status.DOING),
+        )
+        taskAdapter.submitList(taskList)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

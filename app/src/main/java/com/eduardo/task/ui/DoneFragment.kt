@@ -70,13 +70,16 @@ class DoneFragment : Fragment() {
         }
     }
 
-    private fun getTask() = listOf(
-        Task("0", "1Criar nova tela do app", Status.DONE),
-        Task("1","2Validar informações na tela de login", Status.DONE),
-        Task("2","3Adicionar nova funcionalidade no app", Status.DONE),
-        Task("3", "4Salvar token localmente", Status.DONE),
-        Task("4","5Criar funcionalidade de logout no app", Status.DONE),
-    )
+    private fun getTask() {
+        val taskList = listOf(
+            Task("0", "1Criar nova tela do app", Status.DONE),
+            Task("1","2Validar informações na tela de login", Status.DONE),
+            Task("2","3Adicionar nova funcionalidade no app", Status.DONE),
+            Task("3", "4Salvar token localmente", Status.DONE),
+            Task("4","5Criar funcionalidade de logout no app", Status.DONE),
+        )
+        taskAdapter.submitList(taskList)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
