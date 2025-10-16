@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "182743573123",
+    "project_id": "task-db52b",
+    "storage_bucket": "task-db52b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182743573123:android:624ce5f7574e3c839af1b6",
+        "android_client_info": {
+          "package_name": "com.eduardo.task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCDPqHQwgJktZbxDBuAx8z7oqCh-dQBpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
