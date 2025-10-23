@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.eduardo.task.R
 import com.eduardo.task.data.model.Status
@@ -51,6 +50,13 @@ class FormTaskFragment : Fragment() {
     private fun initListener(){
         binding.buttonSave.setOnClickListener {
             valideData()
+        }
+        binding.radioGroup.setOnCheckedChangeListener { _, id-> status =
+            when(id){
+                R.id.rbTodo -> Status.TODO
+                R.id.rbDoing -> Status.DOING
+                else -> Status.DONE
+            }
         }
     }
 
